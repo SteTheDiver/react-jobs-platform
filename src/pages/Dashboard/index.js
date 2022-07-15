@@ -1,6 +1,6 @@
 import AllJobs from "./AllJobs";
 import Profile from "./Profile";
-import Statics from "./Statics";
+import Statistics from "./Statistics";
 import SharedLayout from "./SharedLayout";
 
-export { Profile, AllJobs, AllJobs, Statics, SharedLayout };
+export { Profile, AllJobs, Statistics, SharedLayout };
