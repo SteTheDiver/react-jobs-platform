@@ -12,7 +12,7 @@ const SharedLayout = () => {
         <Sidebar />
         <div>
           <Navbar />
-          <div className="dashboard-page">
+          <div className='dashboard-page'>
             <Outlet />
           </div>
         </div>
@@ -20,5 +20,4 @@ const SharedLayout = () => {
     </Wrapper>
   );
 };
-
 export default SharedLayout;
