@@ -22,14 +22,6 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (user) {
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
-    }
-  }, [user]);
-
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -54,6 +46,13 @@ const Register = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
 
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    }
+  }, [user]);
   return (
     <Wrapper className="full-page">
       <form action="" className="form" onSubmit={onSubmit}>
