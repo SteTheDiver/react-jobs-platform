@@ -18,3 +18,5 @@ const Wrapper = styled.div`
     letter-spacing: var(--letterSpacing);
   }
 `
+
+export default Wrapper;
