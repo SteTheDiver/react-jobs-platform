@@ -10,6 +10,9 @@ import SearchJob from "./SearchJob";
 import JobsContainer from "./JobsContainer";
 import Loader from "./Loader";
 
+import Statistics from "./Statistics";
+import ChartsContainer from "./ChartsContainer";
+
 export {
   Logo,
   FormRow,
@@ -22,4 +25,6 @@ export {
   SearchJob,
   JobsContainer,
   Loader,
+  ChartsContainer,
+  Statistics,
 };
