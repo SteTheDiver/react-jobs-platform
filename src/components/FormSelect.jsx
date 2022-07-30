@@ -1,5 +1,4 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
 
 const FormSelect = ({ name, value, labelText, list, handleChange }) => {
   return (
