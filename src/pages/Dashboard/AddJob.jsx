@@ -30,6 +30,8 @@ const AddJob = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(jobTypeOptions);
+
     if (!position || !company || !jobLocation) {
       toast.error("Please fill all the fields");
       return;
@@ -89,16 +91,15 @@ const AddJob = () => {
           />
 
           <FormSelect
-            labelText={"status"}
             name="status"
             value={status}
-            list={statusOptions}
             handleChange={handleJobInput}
+            list={statusOptions}
           />
           <FormSelect
             labelText={"job type"}
             name="jobType"
-            value={status}
+            value={jobType}
             list={jobTypeOptions}
             handleChange={handleJobInput}
           />
