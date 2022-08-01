@@ -123,6 +123,7 @@ export const jobSlice = createSlice({
       toast.success("Job modified");
     },
     [editJob.rejected]: (state, { payload }) => {
+      state.isLoading = false;
       toast.error(payload);
     },
   },
