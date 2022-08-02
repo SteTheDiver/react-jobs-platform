@@ -8,9 +8,18 @@ import Loader from "./Loader";
 import PagesButton from "./PagesButton";
 
 const JobsContainer = () => {
-  const { jobs, isLoading, page, totalJobs, numOfPages } = useSelector(
-    (store) => store.allJobs
-  );
+  const {
+    jobs,
+    isLoading,
+    page,
+    totalJobs,
+    numOfPages,
+    sort,
+    search,
+    searchStatus,
+    searchType,
+    status,
+  } = useSelector((store) => store.allJobs);
 
   console.log(totalJobs, numOfPages);
 
@@ -18,7 +27,7 @@ const JobsContainer = () => {
 
   useEffect(() => {
     dispatch(getAllJobs());
-  }, []);
+  }, [page, sort, search, searchType, searchStatus, status]);
 
   if (isLoading) {
     return <Loader center />;
@@ -35,7 +44,7 @@ const JobsContainer = () => {
   return (
     <Wrapper>
       <h5>
-        {totalJobs} job{totalJobs > 1 && "s"} found4
+        {totalJobs} job{totalJobs > 1 && "s"} found
       </h5>
       <div className="jobs">
         {jobs.map((job) => {
