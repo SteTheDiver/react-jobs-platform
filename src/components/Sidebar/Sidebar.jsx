@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import Wrapper from "../../assets/wrappers/Sidebar";
+import Logo from "../Logo";
 import NavLinks from "./NavLinks";
 
 const Sidebar = () => {
@@ -15,7 +16,9 @@ const Sidebar = () => {
         }
       >
         <div className="content">
-          <header>LOGO</header>
+          <header>
+            <Logo />
+          </header>
           <NavLinks />
         </div>
       </div>

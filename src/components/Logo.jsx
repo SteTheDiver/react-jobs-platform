@@ -1,7 +1,8 @@
 import React from "react";
+import logo from "../assets/images/logo.svg";
 
 const Logo = () => {
-  return <img src="" alt="jobby logo" className="logo" />;
+  return <img src={logo} alt="jobby logo" className="logo" />;
 };
 
 export default Logo;

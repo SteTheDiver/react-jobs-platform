@@ -1,11 +1,11 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
 
 import Wrapper from "../../assets/wrappers/SidebarResponsive";
 import { toggleSidebar } from "../../features/user/userSlice";
 import NavLinks from "./NavLinks";
+import Logo from './../Logo'
 
 const SidebarResponsive = () => {
   const { isSidebarOpen } = useSelector((store) => store.user);
@@ -26,7 +26,9 @@ const SidebarResponsive = () => {
           <button className="close-btn" onClick={toggle}>
             <FaTimes />
           </button>
-          <header>logo</header>
+          <header>
+            <Logo />
+          </header>
           <NavLinks toggle={toggle} />
         </div>
       </div>

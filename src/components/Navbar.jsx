@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Logo } from "./Logo";
+import Logo from "./Logo";
 import Wrapper from "../assets/wrappers/Navbar";
 import { toggleSidebar, clearStore } from "../features/user/userSlice";
 
@@ -22,7 +22,8 @@ const Navbar = () => {
         <button className="toggle-btn" onClick={toggle}>
           <FaAlignLeft />
         </button>
-        <div className="logo">
+        <div>
+          <Logo />
           <h3 className="logo-text">Dashboard</h3>
         </div>
         <div className="btn-container">
@@ -35,7 +36,7 @@ const Navbar = () => {
             <button
               type="buttn"
               className="dropdown-btn"
-              onClick={() => dispatch(clearStore('Logging out..'))}
+              onClick={() => dispatch(clearStore("Logging out.."))}
             >
               logout
             </button>
